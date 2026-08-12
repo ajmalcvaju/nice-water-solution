@@ -45,9 +45,9 @@ export default function TdsCalculator() {
     <section className="tds-calculator-section" id="tdsCalculator">
       <div className="container">
         <div className="section-title-wrap text-center">
-          <span className="section-tag" style={{ color: 'var(--aqua-glow)' }}>
+          {/* <span className="section-tag" style={{ color: 'var(--aqua-glow)' }}>
             INTERACTIVE WATER TOOL
-          </span>
+          </span> */}
           <h2 className="section-title" style={{ color: 'white' }}>
             Water TDS & Purifier Recommendation
           </h2>
