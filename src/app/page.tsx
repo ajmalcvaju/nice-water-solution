@@ -115,7 +115,7 @@ export default function HomePage() {
       <section className="products-section" id="productsSection">
         <div className="container">
           <div className="section-title-wrap text-center">
-            <span className="section-tag">PREMIUM PURIFICATION</span>
+            {/* <span className="section-tag">PREMIUM PURIFICATION</span> */}
             <h2 className="section-title text-center">Our Products</h2>
           </div>
 
@@ -128,7 +128,7 @@ export default function HomePage() {
       <section className="why-choose-section">
         <div className="container">
           <div className="section-title-wrap">
-            <span className="section-tag">ENGINEERING PURITY</span>
+            {/* <span className="section-tag">ENGINEERING PURITY</span> */}
             <h2 className="section-title">Why Choose Us</h2>
           </div>
 

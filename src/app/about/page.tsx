@@ -37,7 +37,7 @@ export default function AboutPage() {
                 Whether removing microscopic dissolved salts, heavy metals, harmful pesticides, or delivering thousands of litres of pure water daily for homes and commercial setups, Nice Water Solutions delivers uncompromised engineering quality and 100% genuine food-grade components.
               </p>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px', marginTop: '30px' }}>
+              <div className="about-mission-grid">
                 <div style={{ background: '#f0f9fc', padding: '20px', borderRadius: '12px', borderLeft: '4px solid #00c2cb' }}>
                   <h4 style={{ color: '#0056b3', marginBottom: '6px' }}>Vision</h4>
                   <p style={{ fontSize: '0.88rem', color: '#475569' }}>
@@ -69,7 +69,7 @@ export default function AboutPage() {
       <section style={{ padding: '80px 0', background: '#f8fbfe' }}>
         <div className="container">
           <div className="section-title-wrap text-center">
-            <span className="section-tag">CORE TECHNOLOGY</span>
+            {/* <span className="section-tag">CORE TECHNOLOGY</span> */}
             <h2 className="section-title text-center">Multi-Stage Purification Architecture</h2>
           </div>
 

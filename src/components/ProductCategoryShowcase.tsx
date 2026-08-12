@@ -101,9 +101,9 @@ export default function ProductCategoryShowcase() {
           <div
             key={cat.id}
             id={cat.id}
-            className={`category-showcase-row ${isImageLeft ? 'row-image-left reverse-mobile' : ''}`}
+            className={`category-showcase-row ${isImageLeft ? 'row-image-left' : ''}`}
           >
-            {/* If image is placed on the left */}
+            {/* If image is placed on the left on desktop/laptop */}
             {isImageLeft && (
               <div className={`category-img-container ${!cat.isPlaceholder ? 'image-loaded' : ''}`}>
                 {cat.isPlaceholder && <span className="image-placeholder-tag">Image Placeholder</span>}
@@ -130,7 +130,7 @@ export default function ProductCategoryShowcase() {
               </Link>
             </div>
 
-            {/* If image is placed on the right */}
+            {/* If image is placed on the right on desktop/laptop */}
             {!isImageLeft && (
               <div className={`category-img-container ${!cat.isPlaceholder ? 'image-loaded' : ''}`}>
                 {cat.isPlaceholder && <span className="image-placeholder-tag">Image Placeholder</span>}

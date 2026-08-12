@@ -5,7 +5,7 @@ export default function Testimonials() {
     <section className="testimonials-section">
       <div className="container">
         <div className="section-title-wrap text-center">
-          <span className="section-tag">CLIENT FEEDBACK</span>
+          {/* <span className="section-tag">CLIENT FEEDBACK</span> */}
           <h2 className="section-title text-center">Testimonials</h2>
         </div>
 

@@ -25,7 +25,7 @@ export default function ServicesPage() {
       <section style={{ padding: '80px 0', background: '#f8fbfe' }}>
         <div className="container">
           <div className="section-title-wrap text-center">
-            <span className="section-tag">PREMIUM PURIFICATION</span>
+            {/* <span className="section-tag">PREMIUM PURIFICATION</span> */}
             <h2 className="section-title text-center">Our Product Categories & Solutions</h2>
           </div>
 
@@ -37,11 +37,11 @@ export default function ServicesPage() {
       <section style={{ padding: '90px 0' }}>
         <div className="container">
           <div className="section-title-wrap text-center">
-            <span className="section-tag">TURNKEY WATER ENGINEERING</span>
+            {/* <span className="section-tag">TURNKEY WATER ENGINEERING</span> */}
             <h2 className="section-title text-center">Engineered Water Systems & Capabilities</h2>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', marginTop: '40px' }}>
+          <div className="capabilities-grid">
             {/* Category 1: Water Purifiers */}
             <div style={{ background: 'white', borderRadius: '16px', padding: '36px', boxShadow: 'var(--shadow-md)', border: '1px solid #e2e8f0' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '16px' }}>

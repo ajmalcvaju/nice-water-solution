@@ -188,34 +188,73 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Interactive Map Section */}
-      <section style={{ background: '#f1f5f9', padding: '60px 0' }}>
-        <div className="container text-center">
-          <h3 style={{ color: '#0b2545', marginBottom: '16px' }}>
-            Nice Water Solutions Experience Center & Shop
-          </h3>
+      {/* Interactive Google Map Section */}
+      <section style={{ background: '#f8fafc', padding: '70px 0' }}>
+        <div className="container">
+          <div className="section-title-wrap text-center" style={{ marginBottom: '30px' }}>
+            {/* <span className="section-tag">FIND US ON MAP</span> */}
+            <h2 className="section-title text-center" style={{ fontSize: '2.2rem', color: '#0b2545', marginTop: '8px' }}>
+              Visit Our Store in Kozhikode
+            </h2>
+            <p style={{ color: '#64748b', maxWidth: '600px', margin: '12px auto 0 auto', fontSize: '1rem' }}>
+              Ek Building, Opposite Check Post, Market Road, Palayam, Kozhikode - 673001, Kerala
+            </p>
+          </div>
+
           <div
             style={{
               background: '#ffffff',
-              borderRadius: '16px',
-              padding: '30px',
-              boxShadow: 'var(--shadow-md)',
-              border: '2px dashed #93c5fd',
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minHeight: '250px',
+              borderRadius: '20px',
+              overflow: 'hidden',
+              boxShadow: '0 12px 35px rgba(0, 50, 100, 0.1)',
+              border: '1px solid #e2e8f0',
             }}
           >
-            <div style={{ fontSize: '2.5rem', marginBottom: '12px' }}>🗺️</div>
-            <h4 style={{ color: '#0056b3', marginBottom: '6px' }}>Palayam, Kozhikode, Kerala</h4>
-            <p style={{ color: '#64748b', maxWidth: '500px', marginBottom: '16px' }}>
-              Ek Building, Opposite Check Post, Market Road, Palayam, Kozhikode - 673001, Kerala
-            </p>
-            <a href="https://maps.google.com/?q=Palayam,Kozhikode,Kerala" target="_blank" rel="noopener noreferrer" className="btn btn-cyan">
-              Open in Google Maps
-            </a>
+            {/* Embedded Google Map */}
+            <div style={{ width: '100%', height: '420px', position: 'relative' }}>
+              <iframe
+                title="Nice Water Solutions Shop Location"
+                src="https://maps.google.com/maps?q=11.2476021,75.7918167&hl=en&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0, display: 'block' }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
+            {/* Map Action Bar */}
+            <div
+              style={{
+                padding: '20px 28px',
+                background: '#ffffff',
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                gap: '16px',
+                borderTop: '1px solid #f1f5f9',
+              }}
+            >
+              <div>
+                <strong style={{ color: '#0b2545', fontSize: '1.05rem', display: 'block' }}>
+                  📍 Palayam Shop & Showroom
+                </strong>
+                <span style={{ color: '#64748b', fontSize: '0.9rem' }}>
+                  Opposite Check Post, Market Road, Palayam, Kozhikode, Kerala
+                </span>
+              </div>
+              <a
+                href="https://www.google.com/maps/place/11%C2%B014'51.4%22N+75%C2%B047'30.5%22E/@11.2476021,75.7918167,17z/data=!3m1!4b1!4m4!3m3!8m2!3d11.2476021!4d75.7918167"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-cyan"
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}
+              >
+                Get Directions in Google Maps →
+              </a>
+            </div>
           </div>
         </div>
       </section>
