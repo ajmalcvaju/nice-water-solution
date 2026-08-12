@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 400" width="240" height="400">
+  <defs>
+    <linearGradient id="frpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052a3" />
+      <stop offset="25%" stop-color="#0077cc" />
+      <stop offset="70%" stop-color="#0099e6" />
+      <stop offset="100%" stop-color="#003d7a" />
+    </linearGradient>
+    <linearGradient id="blackBase" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="50%" stop-color="#374151" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <filter id="softenerShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Multiport Top Valve -->
+  <g transform="translate(80, 20)">
+    <rect x="25" y="30" width="30" height="20" fill="#1f2937" rx="3" />
+    <path d="M10,20 L70,20 L65,32 L15,32 Z" fill="#374151" />
+    <circle cx="40" cy="18" r="14" fill="#111827" stroke="#9ca3af" stroke-width="2" />
+    <line x1="26" y1="18" x2="54" y2="18" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <line x1="40" y1="4" x2="40" y2="32" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+    <rect x="0" y="24" width="16" height="10" rx="2" fill="#1f2937" />
+    <rect x="64" y="24" width="16" height="10" rx="2" fill="#1f2937" />
+  </g>
+
+  <!-- FRP Vessel Cylinder Body -->
+  <path d="M70,80 C70,60 170,60 170,80 L170,330 C170,345 70,345 70,330 Z" fill="url(#frpGrad)" filter="url(#softenerShadow)" />
+  <path d="M90,75 L102,75 L102,335 L90,335 Z" fill="#ffffff" opacity="0.25" />
+
+  <!-- Nice Water Solutions Label Badge -->
+  <rect x="75" y="160" width="90" height="42" rx="6" fill="#ffffff" stroke="#93c5fd" stroke-width="1" />
+  <text x="120" y="180" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#f59e0b" text-anchor="middle" font-style="italic">Nice</text>
+  <text x="120" y="194" font-family="'Outfit', sans-serif" font-size="6.5" font-weight="800" fill="#0056b3" text-anchor="middle" letter-spacing="1">WATER SOFTENER</text>
+
+  <!-- Bottom Stable Tripod Base Stand -->
+  <path d="M66,330 L174,330 L170,370 L70,370 Z" fill="url(#blackBase)" rx="4" />
+</svg>

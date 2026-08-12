@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 380" width="300" height="380">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="25%" stop-color="#1f2937" />
+      <stop offset="75%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="whitePanel" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+    <linearGradient id="waterBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#0066CC" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Purifier Outer Body -->
+  <rect x="40" y="30" width="220" height="300" rx="28" fill="url(#bodyGrad)" filter="url(#dropShadow)" />
+  
+  <!-- Left Side Nice Vertical Branding -->
+  <text x="62" y="180" font-family="'Outfit', sans-serif" font-size="16" font-weight="900" fill="#f59e0b" transform="rotate(-90 62 180)" letter-spacing="3">NICE</text>
+
+  <!-- Central White Curved Display Chamber -->
+  <path d="M80,50 L220,50 C230,50 238,58 238,68 L238,250 C238,280 215,290 150,290 C85,290 62,280 62,250 L62,68 C62,58 70,50 80,50 Z" fill="url(#whitePanel)" />
+
+  <!-- Digital Circular Display Screen -->
+  <circle cx="150" cy="120" r="32" fill="#0f172a" stroke="#00c2cb" stroke-width="2.5" />
+  <circle cx="150" cy="120" r="26" fill="#020617" />
+  
+  <!-- Status Icons on Screen -->
+  <circle cx="140" cy="112" r="3" fill="#00e5ff" />
+  <circle cx="150" cy="110" r="3" fill="#10b981" />
+  <circle cx="160" cy="112" r="3" fill="#00a8e8" />
+  <text x="150" y="130" font-family="'Outfit', sans-serif" font-size="9" font-weight="800" fill="#00e5ff" text-anchor="middle">PURE</text>
+  <text x="150" y="138" font-family="'Outfit', sans-serif" font-size="6.5" font-weight="600" fill="#94a3b8" text-anchor="middle">TDS 45</text>
+
+  <!-- 3 Mineral Tech Indicators (RO + UV + Alkaline) -->
+  <g transform="translate(110, 175)">
+    <circle cx="15" cy="15" r="10" fill="#0066cc" stroke="#ffffff" stroke-width="2" />
+    <circle cx="40" cy="15" r="10" fill="#00c2cb" stroke="#ffffff" stroke-width="2" />
+    <circle cx="65" cy="15" r="10" fill="#10b981" stroke="#ffffff" stroke-width="2" />
+    <path d="M15,10 C15,10 12,14 12,16 C12,18 13.5,19 15,19 C16.5,19 18,18 18,16 C18,14 15,10 15,10 Z" fill="#ffffff" />
+    <path d="M40,10 C40,10 37,14 37,16 C37,18 38.5,19 40,19 C41.5,19 43,18 43,16 C43,14 40,10 40,10 Z" fill="#ffffff" />
+    <path d="M65,10 C65,10 62,14 62,16 C62,18 63.5,19 65,19 C66.5,19 68,18 68,16 C68,14 65,10 65,10 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Water Level Transparent Tank Window -->
+  <rect x="90" y="225" width="120" height="42" rx="10" fill="#dbeafe" stroke="#93c5fd" stroke-width="1.5" />
+  <path d="M92,245 Q120,238 150,245 T208,245 L208,264 C208,265 206,266 204,266 L96,266 C94,266 92,265 92,264 Z" fill="url(#waterBlue)" opacity="0.8" />
+  
+  <!-- Chrome Dispensing Faucet Tap -->
+  <path d="M144,300 L156,300 L154,320 L146,320 Z" fill="#94a3b8" />
+  <path d="M140,320 L160,320 L150,336 Z" fill="#cbd5e1" />
+  <rect x="146" y="295" width="8" height="6" rx="2" fill="#00c2cb" />
+</svg>

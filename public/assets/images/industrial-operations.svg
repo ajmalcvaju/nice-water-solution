@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#bae6fd" />
+    </linearGradient>
+    <linearGradient id="poolWater" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="50%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="concrete" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+    <linearGradient id="workerSuit" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ff6b00" />
+      <stop offset="100%" stop-color="#e05600" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sky & Horizon -->
+  <rect x="0" y="0" width="800" height="200" fill="url(#skyGrad)" />
+  <path d="M0,180 Q200,160 400,175 T800,165 L800,200 L0,200 Z" fill="#64748b" opacity="0.3" />
+
+  <!-- Concrete Water Treatment Basins / Channels -->
+  <rect x="0" y="190" width="800" height="290" fill="url(#concrete)" />
+  
+  <!-- Clear Aeration / Filtration Water Pools with Ripples -->
+  <!-- Left Pool -->
+  <polygon points="40,240 360,240 340,450 20,450" fill="url(#poolWater)" />
+  <path d="M50,280 Q180,270 330,280" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M40,340 Q180,330 320,340" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M30,400 Q180,390 310,400" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+
+  <!-- Right Pool -->
+  <polygon points="440,240 760,240 780,450 460,450" fill="url(#poolWater)" />
+  <path d="M460,280 Q600,270 740,280" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M470,340 Q610,330 750,340" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+  <path d="M480,400 Q620,390 760,400" stroke="#7dd3fc" stroke-width="3" fill="none" opacity="0.7" />
+
+  <!-- Concrete Dividing Walkways & Structural Beams -->
+  <rect x="360" y="210" width="80" height="270" fill="#e2e8f0" stroke="#94a3b8" stroke-width="3" />
+  <rect x="0" y="210" width="800" height="30" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2" />
+  <line x1="0" y1="200" x2="800" y2="200" stroke="#cbd5e1" stroke-width="6" />
+
+  <!-- Central Water Filtration Machine / Pump Enclosure -->
+  <rect x="240" y="80" width="200" height="150" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="4" />
+  <rect x="255" y="95" width="80" height="60" rx="3" fill="#0284c7" />
+  <!-- Electric Pump Cylinders on Skid -->
+  <rect x="350" y="110" width="30" height="90" rx="4" fill="#0066cc" />
+  <rect x="390" y="110" width="30" height="90" rx="4" fill="#0066cc" />
+
+  <!-- Pipeline Network -->
+  <path d="M120,225 L120,150 L240,150" fill="none" stroke="#0284c7" stroke-width="12" stroke-linecap="round" />
+  <path d="M440,160 L680,160 L680,225" fill="none" stroke="#0284c7" stroke-width="12" stroke-linecap="round" />
+  <circle cx="180" cy="150" r="10" fill="#ff4757" stroke="#ffffff" stroke-width="2" />
+  <circle cx="560" cy="160" r="10" fill="#ff4757" stroke="#ffffff" stroke-width="2" />
+
+  <!-- Engineers / Technicians in Safety Helmets & Hi-Vis Vests -->
+  <!-- Engineer 1 (Center Left - inspecting valves) -->
+  <g transform="translate(180, 110)">
+    <!-- Helmet -->
+    <ellipse cx="20" cy="15" rx="10" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <!-- Head -->
+    <circle cx="20" cy="22" r="7" fill="#fed7aa" />
+    <!-- Orange Body / Jacket -->
+    <path d="M10,29 L30,29 L35,65 L5,65 Z" fill="url(#workerSuit)" />
+    <!-- Blue Trousers -->
+    <rect x="8" y="65" width="10" height="40" fill="#1e3a8a" />
+    <rect x="22" y="65" width="10" height="40" fill="#1e3a8a" />
+    <!-- Safety Boots -->
+    <rect x="6" y="105" width="14" height="8" rx="2" fill="#0f172a" />
+    <rect x="20" y="105" width="14" height="8" rx="2" fill="#0f172a" />
+  </g>
+
+  <!-- Engineer 2 (Center Right - monitoring plant) -->
+  <g transform="translate(480, 100)">
+    <ellipse cx="20" cy="15" rx="10" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <circle cx="20" cy="22" r="7" fill="#fed7aa" />
+    <path d="M10,29 L30,29 L35,65 L5,65 Z" fill="url(#workerSuit)" />
+    <rect x="8" y="65" width="10" height="45" fill="#1e3a8a" />
+    <rect x="22" y="65" width="10" height="45" fill="#1e3a8a" />
+    <rect x="6" y="110" width="14" height="8" rx="2" fill="#0f172a" />
+    <rect x="20" y="110" width="14" height="8" rx="2" fill="#0f172a" />
+  </g>
+
+  <!-- Engineer 3 (Inspecting lower basin) -->
+  <g transform="translate(320, 260)">
+    <ellipse cx="20" cy="15" rx="10" ry="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1" />
+    <circle cx="20" cy="22" r="7" fill="#fed7aa" />
+    <path d="M8,28 L32,28 L36,65 L4,65 Z" fill="url(#workerSuit)" />
+    <rect x="7" y="65" width="11" height="45" fill="#1e3a8a" />
+    <rect x="22" y="65" width="11" height="45" fill="#1e3a8a" />
+    <rect x="5" y="110" width="15" height="8" rx="2" fill="#0f172a" />
+    <rect x="20" y="110" width="15" height="8" rx="2" fill="#0f172a" />
+  </g>
+</svg>

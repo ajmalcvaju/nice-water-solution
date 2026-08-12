@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 110" width="360" height="110">
+  <defs>
+    <linearGradient id="niceYellowW" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF033" />
+      <stop offset="30%" stop-color="#FFDD00" />
+      <stop offset="100%" stop-color="#F5B800" />
+    </linearGradient>
+
+    <linearGradient id="splashBlueW" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="60%" stop-color="#7dd3fc" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 5)">
+    <!-- Water Wave Splash -->
+    <g transform="translate(230, 20)">
+      <path d="M-90,42 C-40,42 10,40 30,22 C45,8 48,-5 36,-12 C30,-15 22,-8 28,-2 C32,2 35,12 20,22 C5,32 -40,34 -90,36 Z" fill="url(#splashBlueW)" />
+      <path d="M38,-18 C40,-24 46,-26 48,-22 C50,-18 45,-12 40,-12 C36,-12 36,-14 38,-18 Z" fill="url(#splashBlueW)" />
+      <path d="M52,-8 C55,-13 62,-14 62,-9 C62,-5 58,-1 54,-1 C50,-1 50,-4 52,-8 Z" fill="url(#splashBlueW)" />
+      <path d="M42,2 C46,0 52,2 52,6 C52,10 46,12 43,10 C40,8 40,4 42,2 Z" fill="url(#splashBlueW)" />
+      <path d="M-80,48 C-30,48 0,46 20,36 C10,40 -20,42 -80,44 Z" fill="#38bdf8" opacity="0.8"/>
+    </g>
+
+    <!-- Main "Nice" Typography -->
+    <text x="10" y="65" font-family="'Outfit', 'Comfortaa', 'Fredoka', cursive, sans-serif" font-size="78" font-weight="900" fill="url(#niceYellowW)" letter-spacing="-1px" font-style="italic">Nice</text>
+
+    <!-- "WATER SOLUTIONS" in White for Dark Backgrounds -->
+    <text x="12" y="96" font-family="'Outfit', 'Plus Jakarta Sans', sans-serif" font-size="21" font-weight="900" fill="#ffffff" letter-spacing="3.8px">WATER SOLUTIONS</text>
+  </g>
+</svg>
