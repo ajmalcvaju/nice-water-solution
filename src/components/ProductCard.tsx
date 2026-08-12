@@ -6,11 +6,16 @@ import { Product } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 
 export default function ProductCard({ product }: { product: Product }) {
-  const { addToCart, openInquiryModal } = useCart();
+  const { openInquiryModal } = useCart();
 
   return (
     <div className="product-card" data-category={product.category}>
-      <span className="product-badge-flag">{product.badge}</span>
+      {/* Product Tag Header - Positioned at the top above image */}
+      <div className="product-card-top-tags">
+        <span className="product-category-tag">{product.categoryLabel}</span>
+        <span className="product-badge-tag">{product.badge}</span>
+      </div>
+
       <div className="product-img-box">
         <Image
           src={product.image}
@@ -20,7 +25,7 @@ export default function ProductCard({ product }: { product: Product }) {
           style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain' }}
         />
       </div>
-      <div className="product-category">{product.categoryLabel}</div>
+
       <h3 className="product-name">{product.name}</h3>
       <ul className="product-specs-list">
         {product.specs.map((spec, index) => (
@@ -37,16 +42,12 @@ export default function ProductCard({ product }: { product: Product }) {
           ₹{product.price.toLocaleString('en-IN')}{' '}
           <span className="original">₹{product.originalPrice.toLocaleString('en-IN')}</span>
         </div>
-        <div style={{ display: 'flex', gap: '6px' }}>
+        <div>
           <button
             className="btn-inquire-sm"
-            style={{ background: '#e0f2fe', color: '#0066cc' }}
             onClick={() => openInquiryModal(product)}
           >
             Inquire
-          </button>
-          <button className="btn-inquire-sm" onClick={() => addToCart(product)}>
-            Add
           </button>
         </div>
       </div>

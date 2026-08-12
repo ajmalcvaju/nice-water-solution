@@ -9,10 +9,6 @@ export default function InquiryModal() {
     isModalOpen,
     closeInquiryModal,
     activeInquiryProduct,
-    cart,
-    cartTotal,
-    removeFromCart,
-    addToCart,
     showToast,
   } = useCart();
 
@@ -30,27 +26,9 @@ export default function InquiryModal() {
     e.preventDefault();
     setSubmitting(true);
 
-    // Build the list of products for WhatsApp
-    let productLines = '';
-    if (activeInquiryProduct) {
-      productLines = `• *${activeInquiryProduct.name}* (Price: ₹${activeInquiryProduct.price.toLocaleString('en-IN')})\n`;
-    } else if (cart.length > 0) {
-      productLines = cart
-        .map(
-          (item, idx) =>
-            `${idx + 1}. *${item.product.name}* (Qty: ${item.quantity}) - ₹${(
-              item.product.price * item.quantity
-            ).toLocaleString('en-IN')}`
-        )
-        .join('\n');
-    } else {
-      productLines = '• Custom Water Purifier / Industrial Treatment Solution Inquiry\n';
-    }
-
-    const grandTotalText =
-      cart.length > 0 && !activeInquiryProduct
-        ? `\n💰 *Total Estimate:* ₹${cartTotal.toLocaleString('en-IN')}`
-        : '';
+    const productText = activeInquiryProduct
+      ? `• *${activeInquiryProduct.name}* (Price: ₹${activeInquiryProduct.price.toLocaleString('en-IN')})\n`
+      : '• General Water Purifier & Treatment Solutions Inquiry\n';
 
     // Create formatted WhatsApp message
     const message = `🌊 *NEW PRODUCT INQUIRY - NICE WATER SOLUTIONS* 🌊\n` +
@@ -60,11 +38,10 @@ export default function InquiryModal() {
       `📍 *Location / City:* ${city}\n` +
       (notes.trim() ? `📝 *Requirement Notes:* ${notes}\n` : '') +
       `-----------------------------------------\n` +
-      `🛒 *Selected Products / Inquired Items:*\n` +
-      `${productLines}` +
-      `${grandTotalText}\n` +
+      `🛒 *Inquired Product:*\n` +
+      `${productText}` +
       `-----------------------------------------\n` +
-      `_Sent via Nice Water Solutions Online Store_`;
+      `_Sent via Nice Water Solutions Store_`;
 
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${targetWhatsAppNumber}?text=${encodedMessage}`;
@@ -73,7 +50,7 @@ export default function InquiryModal() {
     fetch('/api/inquiry', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, phone, city, notes, cart, activeInquiryProduct }),
+      body: JSON.stringify({ name, phone, city, notes, activeInquiryProduct }),
     }).catch((err) => console.error(err));
 
     setTimeout(() => {
@@ -88,7 +65,7 @@ export default function InquiryModal() {
     <div className="modal-backdrop" onClick={closeInquiryModal}>
       <div
         className="modal-box"
-        style={{ maxWidth: '580px', maxHeight: '90vh', overflowY: 'auto' }}
+        style={{ maxWidth: '540px', maxHeight: '90vh', overflowY: 'auto' }}
         onClick={(e) => e.stopPropagation()}
       >
         <button className="modal-close-btn" aria-label="Close Modal" onClick={closeInquiryModal}>
@@ -117,8 +94,8 @@ export default function InquiryModal() {
           </p>
         </div>
 
-        {/* Display Active Inquired Item or Cart Bag */}
-        {activeInquiryProduct ? (
+        {/* Display Active Inquired Item if selected */}
+        {activeInquiryProduct && (
           <div
             style={{
               background: '#f8fafc',
@@ -131,7 +108,7 @@ export default function InquiryModal() {
               marginBottom: '20px',
             }}
           >
-            <div style={{ width: '50px', height: '50px', position: 'relative', flexShrink: 0 }}>
+            <div style={{ width: '55px', height: '55px', position: 'relative', flexShrink: 0 }}>
               <Image
                 src={activeInquiryProduct.image}
                 alt={activeInquiryProduct.name}
@@ -151,86 +128,6 @@ export default function InquiryModal() {
               </div>
             </div>
           </div>
-        ) : cart.length > 0 ? (
-          <div
-            style={{
-              background: '#f8fafc',
-              border: '1px solid #e2e8f0',
-              borderRadius: '12px',
-              padding: '14px',
-              marginBottom: '20px',
-            }}
-          >
-            <div
-              style={{
-                fontSize: '0.85rem',
-                fontWeight: 700,
-                color: '#475569',
-                marginBottom: '10px',
-                display: 'flex',
-                justifyContent: 'space-between',
-              }}
-            >
-              <span>Items in Inquiry Bag ({cart.length})</span>
-              <span style={{ color: '#0066cc' }}>Total: ₹{cartTotal.toLocaleString('en-IN')}</span>
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '140px', overflowY: 'auto' }}>
-              {cart.map((item) => (
-                <div
-                  key={item.product.id}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    background: 'white',
-                    padding: '8px 12px',
-                    borderRadius: '8px',
-                    fontSize: '0.88rem',
-                    border: '1px solid #f1f5f9',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <strong>{item.product.name}</strong>
-                    <span style={{ color: '#64748b' }}>x{item.quantity}</span>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    <span style={{ fontWeight: 700, color: '#0066cc' }}>
-                      ₹{(item.product.price * item.quantity).toLocaleString('en-IN')}
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => removeFromCart(item.product.id)}
-                      style={{
-                        background: 'none',
-                        border: 'none',
-                        color: '#ef4444',
-                        cursor: 'pointer',
-                        fontWeight: 'bold',
-                        fontSize: '1rem',
-                      }}
-                      title="Remove item"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div
-            style={{
-              background: '#f0fdf4',
-              border: '1px solid #bbf7d0',
-              borderRadius: '10px',
-              padding: '10px 14px',
-              color: '#166534',
-              fontSize: '0.88rem',
-              marginBottom: '18px',
-            }}
-          >
-            💡 You can customize your requirement or request a general turnkey quote below.
-          </div>
         )}
 
         <form className="lead-form" onSubmit={handleSubmit}>
@@ -238,7 +135,7 @@ export default function InquiryModal() {
             <input
               type="text"
               className="form-control"
-              placeholder="Your Full Name *"
+              placeholder="Your Full Name"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -248,7 +145,7 @@ export default function InquiryModal() {
             <input
               type="tel"
               className="form-control"
-              placeholder="Mobile Number (+91) *"
+              placeholder="Mobile Phone Number (+91)"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
               required
@@ -258,7 +155,7 @@ export default function InquiryModal() {
             <input
               type="text"
               className="form-control"
-              placeholder="City / Delivery Location *"
+              placeholder="City / Delivery Location"
               value={city}
               onChange={(e) => setCity(e.target.value)}
               required
@@ -268,7 +165,7 @@ export default function InquiryModal() {
             <textarea
               className="form-control"
               rows={3}
-              placeholder="Water Source / Requirements (e.g. Borewell TDS 800, Villa Water Softener)..."
+              placeholder="Requirement details, installation query, or questions..."
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
             />
@@ -280,14 +177,14 @@ export default function InquiryModal() {
             style={{
               width: '100%',
               background: '#25D366',
-              color: '#ffffff',
               border: 'none',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               gap: '10px',
-              fontSize: '1.05rem',
+              fontSize: '1rem',
               fontWeight: 700,
+              padding: '12px',
             }}
             disabled={submitting}
           >

@@ -839,17 +839,38 @@ button, input, select, textarea {
   border-color: #bee3f8;
 }
 
-.product-badge-flag {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: #0066cc;
-  color: #fff;
-  font-size: 0.7rem;
+.product-card-top-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.product-category-tag {
+  font-size: 0.72rem;
+  color: #0284c7;
   font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 12px;
   text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: #e0f2fe;
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid #bae6fd;
+}
+
+.product-badge-tag {
+  background: linear-gradient(135deg, #0066cc, #00a8e8);
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 6px rgba(0, 102, 204, 0.18);
+  white-space: nowrap;
 }
 
 .product-img-box {
@@ -857,7 +878,7 @@ button, input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   padding: 10px;
 }
 
@@ -870,14 +891,6 @@ button, input, select, textarea {
 
 .product-card:hover .product-img-box img {
   transform: scale(1.08);
-}
-
-.product-category {
-  font-size: 0.75rem;
-  color: #00a8e8;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 6px;
 }
 
 .product-name {
@@ -934,20 +947,23 @@ button, input, select, textarea {
 }
 
 .btn-inquire-sm {
-  padding: 8px 16px;
-  background: #0066cc;
-  color: #fff;
-  border-radius: 20px;
-  font-size: 0.8rem;
+  padding: 8px 20px;
+  background: linear-gradient(135deg, #0066cc, #00a8e8);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.85rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  transition: var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+  transition: all 0.25s ease;
+  letter-spacing: 0.02em;
 }
 
 .btn-inquire-sm:hover {
-  background: #004d99;
+  background: linear-gradient(135deg, #0052a3, #0090c7);
   transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 102, 204, 0.35);
 }
 
 /* ==========================================================================
