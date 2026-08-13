@@ -61,6 +61,22 @@ export const PRODUCTS_DATA: Product[] = [
     description: 'High recovery 12L domestic RO water purifier with integrated mineral controller, pure & safe drinking water technology, and transparent front panel.'
   },
   {
+    id: 'wave-krystal-digital-ro',
+    name: "Wave Krystal Digital RO Water Purifier",
+    category: 'purifier',
+    categoryLabel: 'Water Purifiers',
+    badge: 'Digital Display',
+    image: '/assets/images/product-wave-krystal-digital.jpg',
+    price: 14499,
+    originalPrice: 18500,
+    specs: [
+      '12 Litres Storage with Smart Water Gauge',
+      'Multi-Stage RO + UV + UF + Alkaline Filtration',
+      'Real-Time Digital Display (TDS, Temp, Auto Flush)'
+    ],
+    description: "Elite domestic water purifier featuring a smart digital panel, real-time TDS monitoring, automatic membrane flushing, and transparent blue storage tank."
+  },
+  {
     id: 'prolife-viber-advanced-12l-ro',
     name: 'Prolife Viber Advanced Water Purifier',
     category: 'purifier',
@@ -114,7 +130,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'treatment',
     categoryLabel: 'Water Treatment Plant',
     badge: 'Whole-House',
-    image: '/assets/images/product-domestic-water-treatment-plant.png',
+    image: '/assets/images/product-water-treatment-plant.png',
     price: 28500,
     originalPrice: 35000,
     specs: [
@@ -130,7 +146,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'treatment',
     categoryLabel: 'Water Treatment Plant',
     badge: 'Commercial WTP',
-    image: '/assets/images/category-water-treatment-plant.png',
+    image: '/assets/images/product-industrial-wtp-5000l.png',
     price: 54000,
     originalPrice: 68000,
     specs: [
@@ -178,7 +194,7 @@ export const PRODUCTS_DATA: Product[] = [
     category: 'cooler',
     categoryLabel: 'Water Cooler',
     badge: 'SS 304 Tank',
-    image: '/assets/images/category-water-cooler.png',
+    image: '/assets/images/product-water-cooler.png',
     price: 36999,
     originalPrice: 45000,
     specs: [

@@ -33,6 +33,61 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Real-World Water Purification Video Showcase */}
+      <section className="video-showcase-section">
+        <div className="container">
+          <div className="section-title-wrap text-center">
+            <span className="section-tag" style={{ color: 'var(--brand-blue)', fontWeight: 700, fontSize: '0.85rem', letterSpacing: '2px', textTransform: 'uppercase', display: 'block', marginBottom: '8px' }}>
+              Live Demonstrations
+            </span>
+            <h2 className="section-title text-center">Water Purification in Action</h2>
+            <p style={{ maxWidth: '600px', margin: '10px auto 0 auto', color: 'var(--text-secondary)' }}>
+              Watch our heavy-duty Water Treatment Plants and RO systems filter, purify, and transform raw water into clean, healthy, and crystal-clear drinking water.
+            </p>
+          </div>
+
+          <div className="video-grid">
+            {/* Video Card 1 */}
+            <div className="video-card">
+              <div className="video-wrapper">
+                <video
+                  className="video-player"
+                  src="/assets/videos/water-treatment-purification-1.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                />
+              </div>
+              <div className="video-card-content">
+                <h3>Heavy-Duty Water Treatment Plant – Active Filtration & Purification</h3>
+                <p>
+                  Witness the active filtration process in our dual-vessel media filtration systems. This video highlights the real-time purification performance and dramatic color change as raw water is processed through the active media beds.
+                </p>
+              </div>
+            </div>
+
+            {/* Video Card 2 */}
+            <div className="video-card">
+              <div className="video-wrapper">
+                <video
+                  className="video-player"
+                  src="/assets/videos/water-treatment-purification-2.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                />
+              </div>
+              <div className="video-card-content">
+                <h3>Commercial RO Plant – Active Purification Showcase</h3>
+                <p>
+                  See how our commercial-scale Reverse Osmosis skids handle high volume filtration. The demonstration shows high-pressure vertical multi-stage pumps in operation, delivering instant, healthy mineral-balanced drinking water.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comprehensive Capabilities Section */}
       <section style={{ padding: '90px 0' }}>
         <div className="container">

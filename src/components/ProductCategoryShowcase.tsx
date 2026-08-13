@@ -39,7 +39,7 @@ export const PRODUCT_CATEGORIES: CategoryItem[] = [
     id: 'water-treatment-plant',
     title: 'Water Treatment Plant',
     imagePlacement: 'left',
-    imageSrc: '/assets/images/category-water-treatment-plant.png',
+    imageSrc: '/assets/images/product-water-treatment-plant.png',
     imageAlt: 'Nice Water Treatment Plant - Dual FRP Vessel System',
     isPlaceholder: false,
     paragraphs: [
@@ -75,7 +75,7 @@ export const PRODUCT_CATEGORIES: CategoryItem[] = [
     id: 'water-cooler',
     title: 'Water Cooler',
     imagePlacement: 'left',
-    imageSrc: '/assets/images/category-water-cooler.png',
+    imageSrc: '/assets/images/product-water-cooler.png',
     imageAlt: 'Commercial Stainless Steel Water Cooler',
     isPlaceholder: false,
     paragraphs: [
