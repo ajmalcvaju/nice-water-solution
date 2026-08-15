@@ -189,19 +189,224 @@ export const PRODUCTS_DATA: Product[] = [
     description: 'Heavy duty 1000 LPH reverse osmosis plant for manufacturing units, colleges, hospital complexes, and packaged drinking water.'
   },
   {
-    id: 'nice-ss-dual-tap-water-cooler',
-    name: 'SS Dual Tap Water Cooler (Plain & Cold)',
+    id: 'nice-frio-15-online-water-cooler',
+    name: 'Frio 15 (Online) Water Cooler',
     category: 'cooler',
     categoryLabel: 'Water Cooler',
-    badge: 'SS 304 Tank',
-    image: '/assets/images/product-water-cooler.png',
-    price: 36999,
+    badge: '15L Cold Storage',
+    image: '/assets/images/product-frio-15.jpg',
+    price: 24700,
+    originalPrice: 30000,
+    specs: [
+      'Online Normal Supply & 15L Cold Storage',
+      'Dual Faucets & Spun Filtration System',
+      'Food-Grade SS 304 Body (335 x 290 x 1210 mm)',
+      'Heavy-Duty Tecumseh Compressor'
+    ],
+    description: 'Sleek, slimline commercial water cooler featuring a durable food-grade SS 304 body, dual faucets, Tecumseh cooling compressor, and integrated spun filtration.'
+  },
+  {
+    id: 'nice-frio-nn-15-water-cooler',
+    name: 'Frio NN 15 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '15L Normal Storage',
+    image: '/assets/images/product-frio-nn-15.jpg',
+    price: 18850,
+    originalPrice: 23000,
+    specs: [
+      '15L Food-Grade Normal Storage Capacity',
+      'Dual Faucets & Integrated Spun Filtration',
+      'Food-Grade SS 304 Body (335 x 290 x 1210 mm)',
+      'Reliable Tecumseh Cooling Unit'
+    ],
+    description: 'Highly durable commercial water dispenser with a food-grade SS 304 body, 15 Litres normal storage, dual taps, spun pre-filtration, and a heavy-duty Tecumseh compressor.'
+  },
+  {
+    id: 'nice-frio-nh-18-water-cooler',
+    name: 'Frio NH 18 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '18L Hot & Normal',
+    image: '/assets/images/product-frio-nh-18.jpg',
+    price: 23400,
+    originalPrice: 28500,
+    specs: [
+      '15L Normal & 3L Hot Water Storage (18L Total)',
+      'Dual Faucets & Integrated Spun Filtration',
+      'Food-Grade SS 304 Body (335 x 290 x 1210 mm)',
+      'Heavy-Duty Tecumseh Compressor & Heating Element'
+    ],
+    description: 'Premium dual-tap hot and normal commercial water dispenser built with a durable food-grade SS 304 body, 18 Litres total storage, integrated spun pre-filtration, and a high-performance Tecumseh compressor.'
+  },
+  {
+    id: 'nice-frio-nc-15-water-cooler',
+    name: 'Frio NC 15 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '15L Cold & Normal',
+    image: '/assets/images/product-frio-nc-15.jpg',
+    price: 24700,
+    originalPrice: 30000,
+    specs: [
+      '5L Normal & 10L Cold Water Storage (15L Total)',
+      'Dual Faucets & Integrated Spun Filtration',
+      'Food-Grade SS 304 Body (335 x 290 x 1210 mm)',
+      'High-Performance Tecumseh Compressor'
+    ],
+    description: 'Robust dual-tap cold and normal commercial water dispenser featuring a food-grade SS 304 body, 15 Litres total storage capacity, active spun pre-filtration, and a high-efficiency Tecumseh cooling compressor.'
+  },
+  {
+    id: 'nice-frio-nhc-16-water-cooler',
+    name: 'Frio NHC 16 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '16L Hot, Cold & Normal',
+    image: '/assets/images/product-frio-nhc-16.jpg',
+    price: 26260,
+    originalPrice: 32000,
+    specs: [
+      '5L Normal, 10L Cold & 1L Hot Storage (16L Total)',
+      '3 Taps (Normal, Hot & Cold) & Spun Filtration',
+      'Food-Grade SS 304 Body (335 x 290 x 1210 mm)',
+      'Heavy-Duty Tecumseh Compressor & Heating Element'
+    ],
+    description: 'Premium triple-tap hot, cold, and normal commercial water cooler built with a food-grade SS 304 body, 16 Litres total storage, integrated spun pre-filtration, and a high-performance Tecumseh compressor.'
+  },
+  {
+    id: 'nice-hydra-20-online-water-cooler',
+    name: 'Hydra 20 (Online) Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '20L Cold Storage',
+    image: '/assets/images/product-hydra-20.jpg',
+    price: 31200,
+    originalPrice: 38000,
+    specs: [
+      'Online Normal Supply & 20L Cold Storage',
+      'Dual Faucets & Spun Filtration System',
+      'Food-Grade SS 304 Body (365 x 330 x 1160 mm)',
+      'Heavy-Duty Tecumseh Compressor'
+    ],
+    description: 'High-capacity, robust commercial water cooler with a durable food-grade SS 304 body, 20 Litres cold storage capacity, dual faucets, a high-power Tecumseh compressor, and integrated spun filtration.'
+  },
+  {
+    id: 'nice-hydra-nn-20-water-cooler',
+    name: 'Hydra NN 20 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '20L Normal Storage',
+    image: '/assets/images/product-hydra-nn-20.jpg',
+    price: 21450,
+    originalPrice: 26000,
+    specs: [
+      '20L Food-Grade Normal Storage Capacity',
+      'Dual Faucets & Integrated Spun/Carbon Filtration',
+      'Food-Grade SS 304 Body (365 x 330 x 1160 mm)',
+      'Reliable Tecumseh Cooling Unit'
+    ],
+    description: 'Robust commercial water dispenser built with a food-grade SS 304 body, 20 Litres normal storage, dual taps, spun and carbon pre-filtration, and a heavy-duty Tecumseh compressor.'
+  },
+  {
+    id: 'nice-hydra-nh-23-water-cooler',
+    name: 'Hydra NH 23 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '23L Hot & Normal',
+    image: '/assets/images/product-hydra-nh-23.jpg',
+    price: 26650,
+    originalPrice: 33000,
+    specs: [
+      '20L Normal & 3L Hot Water Storage (23L Total)',
+      'Dual Faucets & Integrated Spun/Carbon Filtration',
+      'Food-Grade SS 304 Body (365 x 330 x 1160 mm)',
+      'Heavy-Duty Tecumseh Compressor & Heating Element'
+    ],
+    description: 'Premium dual-tap hot and normal commercial water dispenser built with a food-grade SS 304 body, 23 Litres total storage capacity, active spun and carbon filtration, and a high-efficiency Tecumseh compressor.'
+  },
+  {
+    id: 'nice-hydra-nc-20-water-cooler',
+    name: 'Hydra NC 20 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '20L Cold & Normal',
+    image: '/assets/images/product-hydra-nc-20.jpg',
+    price: 34450,
+    originalPrice: 42000,
+    specs: [
+      '10L Normal & 10L Cold Water Storage (20L Total)',
+      'Dual Faucets & Integrated Spun/Carbon Filtration',
+      'Food-Grade SS 304 Body (365 x 330 x 1160 mm)',
+      'High-Performance Tecumseh Compressor'
+    ],
+    description: 'Highly efficient dual-tap cold and normal commercial water cooler constructed with a food-grade SS 304 body, 20 Litres total storage, integrated spun & carbon pre-filtration, and a heavy-duty Tecumseh compressor.'
+  },
+  {
+    id: 'nice-hydra-nhc-23-water-cooler',
+    name: 'Hydra NHC 23 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '23L Hot, Cold & Normal',
+    image: '/assets/images/product-hydra-nhc-23.jpg',
+    price: 37050,
     originalPrice: 45000,
     specs: [
-      '100 Litre Food-Grade SS 304 Tank',
-      'Dual Heavy Brass Faucets (Cold & Plain)',
-      'Fast Refrigerant Chilling System'
+      '10L Normal, 10L Cold & 3L Hot Storage (23L Total)',
+      '3 Taps (Normal, Hot & Cold) & Spun/Carbon Filtration',
+      'Food-Grade SS 304 Body (365 x 330 x 1160 mm)',
+      'Heavy-Duty Tecumseh Compressor & Heating Element'
     ],
-    description: 'Commercial stainless steel drinking water cooler with dual faucets, heavy-gauge drain tray, and high-efficiency cooling compressor.'
+    description: 'Premium triple-tap hot, cold, and normal commercial water cooler built with a food-grade SS 304 body, 23 Litres total storage, integrated spun and carbon pre-filtration, and a high-performance Tecumseh compressor.'
+  },
+  {
+    id: 'nice-cube-nhc-11-water-cooler',
+    name: 'Cube NHC 11 Countertop Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '11L Compact Storage',
+    image: '/assets/images/product-cube-nhc-11.jpg',
+    price: 20150,
+    originalPrice: 25000,
+    specs: [
+      '5L Normal, 5L Cold & 1L Hot Storage (11L Total)',
+      '3 Countertop Taps (Normal, Hot & Cold)',
+      'Food-Grade SS 304 Body (330 x 290 x 685 mm)',
+      'Compact Tecumseh Cooling Unit & Spun Filtration'
+    ],
+    description: 'Space-saving countertop triple-tap water dispenser featuring a food-grade SS 304 body, 11 Litres total storage, built-in spun filtration, and a compact Tecumseh compressor.'
+  },
+  {
+    id: 'nice-edge-nn-80-water-cooler',
+    name: 'Edge NN 80 Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '80L High Capacity',
+    image: '/assets/images/product-edge-nn-80.png',
+    price: 28200,
+    originalPrice: 35000,
+    specs: [
+      '80L Food-Grade Normal Storage Capacity',
+      '3 Heavy-Duty Faucets & Spun/Carbon Filtration',
+      'Food-Grade SS 304 Body (565 x 525 x 1340 mm)',
+      'Robust Industrial Tecumseh Compressor'
+    ],
+    description: 'High-capacity commercial floor-standing water cooler built with a premium food-grade SS 304 body, 80 Litres storage, 3 taps, integrated spun & carbon dual filtration, and a high-performance Tecumseh compressor.'
+  },
+  {
+    id: 'nice-cube-nc-10-water-cooler',
+    name: 'Cube NC 10 Countertop Water Cooler',
+    category: 'cooler',
+    categoryLabel: 'Water Cooler',
+    badge: '10L Compact Storage',
+    image: '/assets/images/product-cube-nc-10.jpg',
+    price: 18200,
+    originalPrice: 22000,
+    specs: [
+      '5L Normal & 5L Cold Water Storage (10L Total)',
+      '2 Countertop Faucets (Normal & Cold)',
+      'Food-Grade SS 304 Body (330 x 290 x 685 mm)',
+      'Compact Tecumseh Compressor & Spun Filtration'
+    ],
+    description: 'Space-saving countertop dual-tap water dispenser featuring a food-grade SS 304 body, 10 Litres total storage, built-in spun filtration, and a compact Tecumseh compressor.'
   }
 ];
