@@ -78,9 +78,28 @@ export default function ServicesPage() {
                 />
               </div>
               <div className="video-card-content">
-                <h3>Commercial RO Plant – Active Purification Showcase</h3>
+                <h3>Domestic Water Treatment Plant – Residential Filtration Showcase</h3>
                 <p>
-                  See how our commercial-scale Reverse Osmosis skids handle high volume filtration. The demonstration shows high-pressure vertical multi-stage pumps in operation, delivering instant, healthy mineral-balanced drinking water.
+                  See how our domestic water treatment plants handle household filtration. The demonstration shows compact media filtration vessels in operation, removing turbidity and scaling agents to deliver soft, clear water for homes.
+                </p>
+              </div>
+            </div>
+
+            {/* Video Card 3 */}
+            <div className="video-card">
+              <div className="video-wrapper">
+                <video
+                  className="video-player"
+                  src="/assets/videos/cooler.mp4"
+                  controls
+                  preload="metadata"
+                  playsInline
+                />
+              </div>
+              <div className="video-card-content">
+                <h3>Commercial SS Water Cooler – Dispensation & Chilling Demonstration</h3>
+                <p>
+                  Observe the operation of our food-grade SS 304 commercial water coolers. This demonstration shows instant chilling performance, dual-tap dispensing flow rate, and durable construction designed for offices, schools, and factories.
                 </p>
               </div>
             </div>

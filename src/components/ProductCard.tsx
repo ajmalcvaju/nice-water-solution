@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Product } from '@/data/products';
 import { useCart } from '@/context/CartContext';
 
@@ -9,7 +10,12 @@ export default function ProductCard({ product }: { product: Product }) {
   const { openInquiryModal } = useCart();
 
   return (
-    <div className="product-card" data-category={product.category}>
+    <Link
+      href={`/products/${product.id}`}
+      className="product-card"
+      data-category={product.category}
+      style={{ textDecoration: 'none', color: 'inherit' }}
+    >
       {/* Product Tag Header - Positioned at the top above image */}
       <div className="product-card-top-tags">
         <span className="product-category-tag">{product.categoryLabel}</span>
@@ -45,12 +51,16 @@ export default function ProductCard({ product }: { product: Product }) {
         <div>
           <button
             className="btn-inquire-sm"
-            onClick={() => openInquiryModal(product)}
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              openInquiryModal(product);
+            }}
           >
             Inquire
           </button>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

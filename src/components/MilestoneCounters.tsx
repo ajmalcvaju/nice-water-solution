@@ -67,8 +67,8 @@ export default function MilestoneCounters() {
     <section className="counters-section">
       <div className="container counters-grid">
         <CounterItem target={250} suffix="+" label="Commercial Projects" />
-        <CounterItem target={250} suffix="+" label="Residential Projects" />
-        <CounterItem target={5000} suffix="+" label="Happy Customers" />
+        <CounterItem target={600} suffix="+" label="Residential Projects" />
+        <CounterItem target={2000} suffix="+" label="Happy Customers" />
         <CounterItem target={99} suffix=".9%" label="Purity Guaranteed" />
       </div>
     </section>
