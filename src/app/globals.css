@@ -2246,18 +2246,31 @@ button, input, select, textarea {
   .product-detail-title {
     font-size: 1.8rem;
   }
-}
-
-@media (max-width: 576px) {
   .product-detail-specs-list {
     grid-template-columns: 1fr;
   }
   .product-detail-actions {
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
   }
   .btn-whatsapp-lg, .btn-call-lg {
-    justify-content: center;
-    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    box-sizing: border-box !important;
+    margin: 0 auto 12px auto !important;
+    text-align: center !important;
+  }
+  .btn-call-lg {
+    margin-bottom: 0 !important;
   }
 }
 
