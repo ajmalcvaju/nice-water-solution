@@ -2242,12 +2242,41 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
     gap: 30px;
     padding: 24px;
+    justify-items: center;
+  }
+  .product-detail-info {
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .product-detail-badge-row {
+    justify-content: center !important;
+    width: 100%;
   }
   .product-detail-title {
     font-size: 1.8rem;
+    text-align: center !important;
+  }
+  .product-detail-desc {
+    text-align: center !important;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .product-detail-specs {
+    width: 100%;
+    text-align: center;
+  }
+  .product-detail-specs h4 {
+    text-align: center;
   }
   .product-detail-specs-list {
-    grid-template-columns: 1fr;
+    display: inline-flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    margin: 0 auto !important;
+    gap: 12px;
   }
   .product-detail-actions {
     display: flex !important;
