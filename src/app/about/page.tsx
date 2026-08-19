@@ -66,6 +66,49 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* RO Purification Explainer Video Section */}
+      <section style={{ padding: '80px 0', background: '#ffffff', borderTop: '1px solid #eef2f6' }}>
+        <div className="container">
+          <div className="about-grid" style={{ alignItems: 'center', gap: '50px' }}>
+            <div style={{ position: 'relative', width: '100%', borderRadius: '20px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)', border: '1px solid #eef2f6', backgroundColor: '#000', aspectRatio: '16/9' }}>
+              <video
+                src="/assets/videos/ro purification.mp4"
+                controls
+                preload="metadata"
+                playsInline
+                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+              />
+            </div>
+            <div>
+              <span className="section-tag">EXPLAINER VIDEO</span>
+              <h2 style={{ fontSize: '2.2rem', color: '#0b2545', marginBottom: '20px', fontWeight: 800 }}>
+                Understanding the RO Purification Process
+              </h2>
+              <p style={{ color: '#475569', fontSize: '1.05rem', marginBottom: '20px', lineHeight: '1.8' }}>
+                Reverse Osmosis (RO) is the world&apos;s most reliable physical water purification technology. By applying high pressure to raw water, it forces water molecules through a semi-permeable membrane with pores as small as <strong>0.0001 microns</strong>.
+              </p>
+              <p style={{ color: '#475569', fontSize: '1.05rem', marginBottom: '24px', lineHeight: '1.8' }}>
+                This process effectively separates and eliminates up to 99.8% of dissolved impurities, including fluorides, heavy metals (like Lead, Arsenic), toxic chemicals, and microscopic bacteria, while returning fresh, healthy, and pristine drinking water.
+              </p>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '12px' }}>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', color: '#475569' }}>
+                  <svg viewBox="0 0 24 24" style={{ width: '20px', height: '20px', fill: '#16a34a', flexShrink: 0 }}>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  0.0001 Micron Precision
+                </li>
+                <li style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.95rem', color: '#475569' }}>
+                  <svg viewBox="0 0 24 24" style={{ width: '20px', height: '20px', fill: '#16a34a', flexShrink: 0 }}>
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                  </svg>
+                  99.8% Impurity Removal
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section style={{ padding: '80px 0', background: '#f8fbfe' }}>
         <div className="container">
           <div className="section-title-wrap text-center">
